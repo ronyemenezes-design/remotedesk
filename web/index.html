@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RemoteDesk - Acesso Remoto Multiplataforma (Mac, Windows e Android)</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Cabeçalho / Navegação -->
+  <header class="app-header">
+    <div class="logo-area">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+          <line x1="8" y1="21" x2="16" y2="21"></line>
+          <line x1="12" y1="17" x2="12" y2="21"></line>
+        </svg>
+      </div>
+      <span class="logo-text">Remote<strong>Desk</strong></span>
+      <span class="tag-version">v1.0 Oficial</span>
+    </div>
+
+    <nav class="nav-links">
+      <a href="#downloads" class="nav-link">Downloads</a>
+      <a href="#console-section" class="nav-link">Conectar Online</a>
+      <a href="#recursos" class="nav-link">Recursos</a>
+    </nav>
+
+    <div class="header-status">
+      <span class="status-indicator" id="server-status-dot"></span>
+      <span id="server-status-text">Conectando...</span>
+    </div>
+  </header>
+
+  <!-- Container Principal: Portal e Console -->
+  <main class="main-container" id="dashboard-view">
+    
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-badge">⚡ Acesso Remoto P2P de Baixa Latência</div>
+      <h1 class="hero-title">Controle qualquer computador com rapidez e segurança</h1>
+      <p class="hero-subtitle">
+        Conecte-se instantaneamente pelo navegador ou baixe nosso aplicativo nativo executável para <strong>macOS</strong>, <strong>Windows</strong> ou <strong>Android</strong>.
+      </p>
+      <div class="hero-actions">
+        <a href="#downloads" class="btn btn-primary btn-large">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          Baixar Aplicativo
+        </a>
+        <a href="#console-section" class="btn btn-secondary btn-large">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polygon points="10 8 16 12 10 16 10 8"></polygon>
+          </svg>
+          Usar no Navegador (Web)
+        </a>
+      </div>
+    </section>
+
+    <!-- SEÇÃO DE DOWNLOADS PARA TODAS AS PLATAFORMAS -->
+    <section class="downloads-section" id="downloads">
+      <div class="section-header">
+        <h2>Baixe o RemoteDesk para o seu Dispositivo</h2>
+        <p>Instale em segundos para obter aceleração por hardware e controle total do sistema.</p>
+      </div>
+
+      <div class="download-cards-grid">
+        
+        <!-- Card macOS -->
+        <div class="download-card">
+          <div class="os-icon-wrapper mac-icon">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.62-.75 1.04-1.8 0.93-2.85-.9.04-1.99.6-2.63 1.35-.57.65-.98 1.72-.85 2.74 1 .08 1.93-.49 2.55-1.24z"/>
+            </svg>
+          </div>
+          <h3>macOS</h3>
+          <span class="os-version-tag">Apple Silicon & Intel (11.0+)</span>
+          <p class="download-desc">Aplicativo completo com suporte a ScreenCaptureKit e permissões nativas de acessibilidade.</p>
+          <a href="/downloads/RemoteDesk-macOS.dmg" download="RemoteDesk-macOS.dmg" class="btn btn-primary btn-block">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            Baixar .DMG (Mac)
+          </a>
+          <div class="alt-downloads">
+            <a href="/downloads/RemoteDesk-macOS.zip" download="RemoteDesk-macOS.zip">Versão portátil (.zip)</a>
+          </div>
+        </div>
+
+        <!-- Card Windows -->
+        <div class="download-card featured">
+          <div class="featured-badge">Mais Popular</div>
+          <div class="os-icon-wrapper win-icon">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+              <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/>
+            </svg>
+          </div>
+          <h3>Windows</h3>
+          <span class="os-version-tag">Windows 10 e 11 (64-bit)</span>
+          <p class="download-desc">Executável leve de alta velocidade com captura DXGI Direct3D e injeção de teclas de sistema.</p>
+          <a href="/downloads/RemoteDesk-Windows.exe" download="RemoteDesk-Windows.exe" class="btn btn-success btn-block">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            Baixar .EXE (Windows)
+          </a>
+          <div class="alt-downloads">
+            <a href="/downloads/RemoteDesk-Windows.exe" download="RemoteDesk-Windows.exe">Executável Standalone</a>
+          </div>
+        </div>
+
+        <!-- Card Android -->
+        <div class="download-card">
+          <div class="os-icon-wrapper android-icon">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+              <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9993.4482.9993.9993.0001.5511-.4483.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993 0 .5511-.4482.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.4116 13.8533 8.125 12 8.125s-3.5902.2866-5.1368.8247L4.8409 5.4467a.4161.4161 0 00-.5677-.1521.4157.4157 0 00-.1521.5676l1.9973 3.4592C2.6889 11.1867.3432 14.6589 0 18.761h24c-.3432-4.1021-2.6889-7.5743-6.1185-9.4396"/>
+            </svg>
+          </div>
+          <h3>Android</h3>
+          <span class="os-version-tag">Smartphones & Tablets (8.0+)</span>
+          <p class="download-desc">Acesse ou preste suporte ao computador direto do seu celular ou tablet com gestos de toque.</p>
+          <a href="/downloads/RemoteDesk-Android.apk" download="RemoteDesk-Android.apk" class="btn btn-secondary btn-block">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            Baixar APK (.apk)
+          </a>
+          <div class="alt-downloads">
+            <a href="#console-section">Ou acesse direto via navegador móvel</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONSOLE DE CONEXÃO ONLINE (WEB CLIENT) -->
+    <section class="console-section" id="console-section">
+      <div class="section-header">
+        <h2>Conectar Diretamente pelo Navegador</h2>
+        <p>Não quer instalar nada agora? Use nosso cliente WebRTC instantâneo abaixo.</p>
+      </div>
+
+      <div class="cards-grid">
+        
+        <!-- Card Host: Este Computador -->
+        <section class="card host-card">
+          <div class="card-header">
+            <div class="badge-icon host-badge">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <div>
+              <h2>Este Computador (Host)</h2>
+              <p>Disponibilize esta máquina para controle remoto</p>
+            </div>
+          </div>
+
+          <div class="id-display-container">
+            <span class="id-label">Seu ID de Conexão</span>
+            <div class="id-number-row">
+              <span class="id-number" id="host-id-display">Gerando ID...</span>
+              <button class="btn btn-secondary btn-icon" id="btn-copy-id" title="Copiar ID">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Seção de Acesso Não Supervisionado -->
+          <div class="unattended-box">
+            <div class="unattended-header">
+              <label class="switch-label">
+                <input type="checkbox" id="toggle-unattended">
+                <span class="switch-slider"></span>
+                <span class="switch-text">Acesso Não Supervisionado</span>
+              </label>
+            </div>
+            <div class="unattended-fields hidden" id="unattended-fields">
+              <div class="password-input-group">
+                <input type="password" id="unattended-password-input" placeholder="Definir senha de acesso fixo" autocomplete="new-password">
+                <button class="btn btn-secondary btn-icon" id="btn-save-unattended" title="Salvar Senha">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+                    <polyline points="17 21 17 13 7 13 7 21"></polyline>
+                    <polyline points="7 3 7 8 15 8"></polyline>
+                  </svg>
+                </button>
+              </div>
+              <span class="unattended-status" id="unattended-status-badge">Nenhuma senha salva</span>
+            </div>
+          </div>
+
+          <div class="host-controls">
+            <button class="btn btn-primary btn-large" id="btn-start-sharing">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polygon points="10 8 16 12 10 16 10 8"></polygon>
+              </svg>
+              Iniciar Compartilhamento de Tela
+            </button>
+            <div class="agent-status-row">
+              <span class="agent-dot" id="agent-status-dot"></span>
+              <span class="agent-text" id="agent-status-text">Agente nativo de mouse/teclado: Verificando...</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Card Cliente: Outro Computador -->
+        <section class="card client-card">
+          <div class="card-header">
+            <div class="badge-icon client-badge">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <div>
+              <h2>Outro Computador (Cliente)</h2>
+              <p>Digite o ID do computador que deseja acessar</p>
+            </div>
+          </div>
+
+          <div class="remote-connect-form">
+            <label for="remote-id-input" class="id-label">ID Remoto (ex: 123-456-789)</label>
+            <div class="input-action-row">
+              <input type="text" id="remote-id-input" placeholder="000-000-000" maxlength="11" autocomplete="off" spellcheck="false">
+              <button class="btn btn-success btn-large" id="btn-connect-remote">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+                Conectar
+              </button>
+            </div>
+            <p class="form-tip">Certifique-se de que o computador remoto está com o aplicativo aberto.</p>
+          </div>
+        </section>
+
+      </div>
+    </section>
+
+    <!-- Recursos / Diferenciais -->
+    <section class="features-section" id="recursos">
+      <div class="feature-item">
+        <div class="feature-icon">🚀</div>
+        <h4>Ultra Baixa Latência</h4>
+        <p>Transmissão a 60 FPS direta ponto a ponto usando WebRTC acelerado por GPU.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🔒</div>
+        <h4>Segurança de Ponta a Ponta</h4>
+        <p>Criptografia DTLS-SRTP e senhas de acesso protegidas com algoritmo SHA-256.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🌐</div>
+        <h4>Multiplataforma Real</h4>
+        <p>Controle do Mac para Windows, de Windows para Mac, ou direto pelo Android.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Visualização de Sessão Ativa (Stream Remoto) -->
+  <section class="remote-session-container hidden" id="remote-session-view">
+    <div class="session-toolbar">
+      <div class="toolbar-left">
+        <span class="live-badge">AO VIVO</span>
+        <span class="session-peer-id" id="session-target-id">Conectado a: ...</span>
+      </div>
+      <div class="toolbar-center">
+        <button class="tool-btn active" id="btn-toggle-input" title="Alternar Controle de Mouse e Teclado">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="3" width="20" height="14" rx="2"></rect>
+            <path d="M6 8h.01M10 8h.01M14 8h.01M18 8h.01M6 12h.01M18 12h.01M8 12h8"></path>
+          </svg>
+          Controle Ativo
+        </button>
+        <button class="tool-btn" id="btn-fullscreen" title="Tela Cheia">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
+          </svg>
+          Tela Cheia
+        </button>
+      </div>
+      <div class="toolbar-right">
+        <button class="btn btn-danger" id="btn-disconnect">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+          Encerrar
+        </button>
+      </div>
+    </div>
+
+    <div class="viewport-wrapper" id="viewport-wrapper">
+      <video id="remote-video" autoplay playsinline muted></video>
+      <div class="session-overlay" id="session-overlay">
+        <div class="spinner"></div>
+        <p id="overlay-status-text">Estabelecendo fluxo P2P WebRTC...</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal de Senha para Acesso Não Supervisionado (No Cliente) -->
+  <div class="modal-backdrop hidden" id="password-modal">
+    <div class="modal-content">
+      <div class="modal-icon auth">
+        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+          <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+        </svg>
+      </div>
+      <h3>Autenticação Requerida</h3>
+      <p>O computador remoto aceita conexões automáticas via senha:</p>
+      
+      <div class="modal-password-box">
+        <input type="password" id="client-password-input" placeholder="Digite a senha remota" autocomplete="current-password">
+        <p class="modal-error-text hidden" id="password-error-text">Senha incorreta. Tente novamente.</p>
+      </div>
+
+      <div class="modal-actions-column">
+        <button class="btn btn-success btn-large" id="btn-submit-password">Entrar com Senha</button>
+        <button class="btn btn-secondary" id="btn-request-manual">Solicitar Aprovação Manual</button>
+        <button class="btn btn-link" id="btn-cancel-password">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de Solicitação de Acesso (No Host) -->
+  <div class="modal-backdrop hidden" id="access-modal">
+    <div class="modal-content">
+      <div class="modal-icon warning">
+        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+          <line x1="12" y1="9" x2="12" y2="13"></line>
+          <line x1="12" y1="17" x2="12.01" y2="17"></line>
+        </svg>
+      </div>
+      <h3>Solicitação de Acesso Remoto</h3>
+      <p>O cliente <strong id="modal-client-name">Cliente Remoto</strong> está solicitando controle deste computador.</p>
+      <div class="modal-actions">
+        <button class="btn btn-secondary" id="btn-reject-access">Recusar</button>
+        <button class="btn btn-success" id="btn-accept-access">Permitir Acesso</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  <footer class="app-footer">
+    <p>RemoteDesk Open Source &copy; 2026. Acesso remoto seguro e de alta performance.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

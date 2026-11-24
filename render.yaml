@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: remotedesk-signaling
+    env: docker
+    plan: free
+    region: oregon
+    branch: main
+    healthCheckPath: /index.html
+    autoDeploy: true
